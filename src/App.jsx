@@ -15,13 +15,18 @@ function App() {
       }
     } else if (label === 'C') {
       setDisplayValue('');
-    } else {
+    }
+  //  else if (label==='backspace') {
+  //   // Handle backspace
+  //   setDisplayValue(displayValue.slice(0, -1));
+  // } 
+    else {
       setDisplayValue(displayValue === '0' ? label : displayValue + label);
     }
   };
 
   return (
-    <div className="max-w-md p-4 mx-auto mt-10 bg-white rounded-lg shadow-md border border-black my-20">
+    <div className="max-w-md p-4 mx-auto my-20 bg-white rounded-lg shadow-md border border-black">
       <Input value={displayValue} />
       <Buttons handleButtonClick={handleButtonClick} />
     </div>
